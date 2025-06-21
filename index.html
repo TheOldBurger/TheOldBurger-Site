@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Old Burger - Cardápio Digital</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #000; color: #fff; font-family: 'Roboto', sans-serif; line-height: 1.4; }
+    header { text-align: center; padding: 2rem 0; }
+    header img { max-width: 200px; margin-bottom: 1rem; }
+    header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; letter-spacing: 4px; text-transform: uppercase; }
+    main { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+    .category { margin-bottom: 3rem; }
+    .category h2 { font-family: 'Playfair Display', serif; font-size: 2rem; text-transform: uppercase; border-bottom: 1px solid #555; padding-bottom: .5rem; margin-bottom: 1rem; }
+    .product-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .product-card { background: rgba(255,255,255,0.05); border: 1px solid #333; border-radius: 8px; overflow: hidden; width: calc(33.333% - 1rem); display: flex; flex-direction: column; }
+    .product-card img { width: 100%; height: auto; object-fit: cover; }
+    .product-info { padding: 1rem; display: flex; flex-direction: column; flex-grow: 1; }
+    .product-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: .5rem; }
+    .product-desc { font-size: .9rem; flex-grow: 1; margin-bottom: .5rem; }
+    .product-price { font-weight: bold; font-size: 1.1rem; text-align: right; }
+    @media (max-width: 768px) { .product-card { width: calc(50% - 1rem); } }
+    @media (max-width: 480px) { .product-card { width: 100%; } header h1 { font-size: 2.5rem; } }
+  </style>
+</head>
+<body>
+  <script>
+    const imgUrls = {
+      logo: 'images/logo.png',
+      smash1: 'images/the-smash-1.jpg',
+      smash2: 'images/the-smash-2.jpg',
+      smash3: 'images/the-smash-3.jpg',
+      bigOld: 'images/the-big-old.jpg',
+      oldBurger: 'images/the-old.jpg',
+      cheeseburger: 'images/cheeseburguer.jpg',
+      cheeseburgerSuper: 'images/cheeseburguer-super.jpg',
+      cheeseburgerBaconSuper: 'images/cheeseburguer-bacon-super.jpg',
+      cheeseburgerBacon: 'images/cheeseburguer-bacon.jpg',
+      fries: 'images/batata-frita.jpg',
+      friesOld: 'images/batata-the-old.jpg',
+      sauceMayo: 'images/molho-maionese.jpg',
+      sauceOld: 'images/molho-the-old.jpg',
+      churros: 'images/mini-churros.jpg'
+    };
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-img]').forEach(el => {
+        const key = el.getAttribute('data-img');
+        if (imgUrls[key]) el.src = imgUrls[key];
+      });
+    });
+  </script>
+
+  <header>
+    <img data-img="logo" alt="The Old Burger Logo">
+    <h1>The Old Burger</h1>
+  </header>
+  <main>
+    <section class="category">
+      <h2>Smash's</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img data-img="smash1" alt="The Smash 1.0">
+          <div class="product-info">
+            <h3 class="product-title">The Smash 1.0</h3>
+            <p class="product-desc">Smash de 80g, maionese especial da casa, cebola em cubos, picles, creme de cheddar, bacon triturado e ketchup no pão francês selado.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="smash2" alt="The Smash 2.0">
+          <div class="product-info">
+            <h3 class="product-title">The Smash 2.0</h3>
+            <p class="product-desc">Dois smashs de 80g, maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão francês selado.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="smash3" alt="The Smash 3.0">
+          <div class="product-info">
+            <h3 class="product-title">The Smash 3.0</h3>
+            <p class="product-desc">Três smashs de 80g com maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão francês selado.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Clássicos</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img data-img="bigOld" alt="The Big Old">
+          <div class="product-info">
+            <h3 class="product-title">The Big Old</h3>
+            <p class="product-desc">Dois hambúrgueres de 120g, cheddar cremoso, alface americana, cebola branca, picles, bacon e molho exclusivo The Old no pão selado.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="oldBurger" alt="The Old">
+          <div class="product-info">
+            <h3 class="product-title">The Old</h3>
+            <p class="product-desc">Hambúrguer de 180g, cheddar, alface americana, tomate, bacon triturado, cebola caramelizada e nosso molho The Old Tasty.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="cheeseburger" alt="The Cheeseburguer">
+          <div class="product-info">
+            <h3 class="product-title">The Cheeseburguer</h3>
+            <p class="product-desc">Hambúrguer de 120g, cheddar, alface americana, tomate e maionese especial The Old.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="cheeseburgerSuper" alt="The Cheeseburguer Super">
+          <div class="product-info">
+            <h3 class="product-title">The Cheeseburguer Super</h3>
+            <p class="product-desc">Dois hambúrgueres de 120g, cheddar, alface americana, tomate e maionese especial The Old.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="cheeseburgerBaconSuper" alt="The Cheeseburguer Bacon Super">
+          <div class="product-info">
+            <h3 class="product-title">The Cheeseburguer Bacon Super</h3>
+            <p class="product-desc">Dois hambúrgueres de 120g, cheddar, alface americana, tomate, bacon triturado e maionese especial The Old.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="cheeseburgerBacon" alt="The Cheeseburguer Bacon">
+          <div class="product-info">
+            <h3 class="product-title">The Cheeseburguer Bacon</h3>
+            <p class="product-desc">Hambúrguer de 120g, cheddar, alface americana, tomate, bacon triturado e maionese especial The Old.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Acompanhamentos</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img data-img="fries" alt="Batata Frita">
+          <div class="product-info">
+            <h3 class="product-title">Batata Frita</h3>
+            <p class="product-desc">Fritura perfeita, crocante por fora e macia por dentro, 300g.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img data-img="friesOld" alt="Batata The Old">
+          <div class="product-info">
+            <h3 class="product-title">Batata The Old</h3>
+            <p class="product-desc">Batata frita coberta com creme de cheddar e bacon crocante triturado, 300g.</p>
+            <div class="product-price">R$ XX,XX</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Molhos</h2>
+      <div class="product-grid">
+        <div class="product-card">  
+          <img data-img="sauceMayo" alt="The Old Maionese">  
+          <div class="product-info">  
+            <h3 class="product-title">The Old Maionese</h3>  
+            <p class="product-desc">Maionese artesanal.</p>  
+            <div class="product-price">R$ XX,XX</div>  
+          </div>
+        </div>
+        <div class="product-card">  
+          <img data-img="sauceOld" alt="Molho The Old">  
+          <div class="product-info">  
+            <h3 class="product-title">Molho The Old</h3>  
+            <p class="product-desc">Nosso molho secreto e irresistível.</p>  
+            <div class="product-price">R$ XX,XX</div>  
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Sobremesas</h2>
+      <div class="product-grid">
+        <div class="product-card">  
+          <img data-img="churros" alt="Mini Churros">  
+          <div class="product-info">  
+            <h3 class="product-title">Mini Churros</h3>  
+            <p class="product-desc">10 mini churros crocantes por fora, macios por dentro e recheados com doce de leite cremoso. Finalizados com açúcar e canela.</p>  
+            <div class="product-price">R$ XX,XX</div>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
