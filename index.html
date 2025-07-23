@@ -25,21 +25,20 @@
     @media (max-width: 480px) { .product-card { width: 100%; } header h1 { font-size: 2.5rem; } }
   </style>
 </head>
-<body> 
+<body>
   <script>
     const imgUrls = {
       logo: 'images/logo.png',
-      smash1: 'images/burger.jpg',//'images/the-smash-1.jpg',
-      smash2: 'images/burger.jpg',//'images/the-smash-2.jpg',
-      smash3: 'images/burger.jpg',//'images/the-smash-3.jpg',
-      bigOld: 'images/burger.jpg',//'images/the-big-old.jpg',
-      oldBurger: 'images/burger.jpg',//'images/the-old.jpg',
-      cheeseburger: 'images/burger.jpg',//'images/cheeseburguer.jpg',
-      cheeseburgerSuper: 'images/burger.jpg',//'images/cheeseburguer-super.jpg',
-      cheeseburgerBaconSuper: 'images/burger.jpg',//'images/cheeseburguer-bacon-super.jpg',
-      cheeseburgerBacon: 'images/burger.jpg',//'images/cheeseburguer-bacon.jpg',
+      smash1: 'images/thesmash1.jpg',
+      smash2: 'images/thesmash2.jpg',
+      smash3: 'images/thesmash3.jpg',
+      bigOld: 'images/TheBigOld.jpg',
+      oldBurger: 'images/burger.jpg',
+      cheeseburger: 'images/CheeseBurger.jpg',
+      cheeseburgerSuper: 'images/CheeseBurgerSuper.jpg',
       fries: 'images/batata-frita.jpg',
       friesOld: 'images/batata-the-old.jpg',
+      fries150: 'images/batata-frita.jpg',
       sauceMayo: 'images/molho-maionese.jpg',
       sauceOld: 'images/molho-the-old.jpg',
       churros: 'images/mini-churros.jpg'
@@ -56,36 +55,43 @@
     <img data-img="logo" alt="The Old Burger Logo">
     <h1>The Old Burger</h1>
   </header>
+
   <main>
+    <!-- Smash's -->
     <section class="category">
       <h2>Smash's</h2>
       <div class="product-grid">
+        <!-- Smash 1.0 -->
         <div class="product-card">
           <img data-img="smash1" alt="The Smash 1.0">
           <div class="product-info">
             <h3 class="product-title">The Smash 1.0</h3>
-            <p class="product-desc">Smash de 80g, maionese especial da casa, cebola em cubos, picles, creme de cheddar, bacon triturado e ketchup no pão francês selado.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Smash de 80g, maionese especial da casa, cebola em cubos, picles, creme de cheddar, bacon triturado e ketchup no pão smash selado.</p>
+            <div class="product-price">R$ 19,99</div>
           </div>
         </div>
+        <!-- Smash 2.0 -->
         <div class="product-card">
           <img data-img="smash2" alt="The Smash 2.0">
           <div class="product-info">
             <h3 class="product-title">The Smash 2.0</h3>
-            <p class="product-desc">Dois smashs de 80g, maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão francês selado.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Dois smashs de 80g, maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão smash selado.</p>
+            <div class="product-price">R$ 29,99</div>
           </div>
         </div>
+        <!-- Smash 3.0 -->
         <div class="product-card">
           <img data-img="smash3" alt="The Smash 3.0">
           <div class="product-info">
             <h3 class="product-title">The Smash 3.0</h3>
-            <p class="product-desc">Três smashs de 80g com maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão francês selado.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Três smashs de 80g com maionese da casa, cebola em cubos, picles, cheddar, bacon triturado e ketchup no pão smash selado.</p>
+            <div class="product-price">R$ 34,99</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Clássicos -->
     <section class="category">
       <h2>Clássicos</h2>
       <div class="product-grid">
@@ -93,8 +99,8 @@
           <img data-img="bigOld" alt="The Big Old">
           <div class="product-info">
             <h3 class="product-title">The Big Old</h3>
-            <p class="product-desc">Dois hambúrgueres de 120g, cheddar cremoso, alface americana, cebola branca, picles, bacon e molho exclusivo The Old no pão selado.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Dois hambúrgueres de 160g, cheddar cremoso, alface americana, cebola branca, picles, bacon e molho exclusivo The Old no pão selado.</p>
+            <div class="product-price">R$ 39,99</div>
           </div>
         </div>
         <div class="product-card">
@@ -102,52 +108,46 @@
           <div class="product-info">
             <h3 class="product-title">The Old</h3>
             <p class="product-desc">Hambúrguer de 180g, cheddar, alface americana, tomate, bacon triturado, cebola caramelizada e nosso molho The Old Tasty.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <div class="product-price">R$ 35,99</div>
           </div>
         </div>
         <div class="product-card">
           <img data-img="cheeseburger" alt="The Cheeseburguer">
           <div class="product-info">
             <h3 class="product-title">The Cheeseburguer</h3>
-            <p class="product-desc">Hambúrguer de 120g, cheddar, alface americana, tomate e maionese especial The Old.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Hambúrguer de 180g, cheddar, alface americana, tomate e maionese especial The Old.</p>
+            <div class="product-price">R$ 25,99</div>
           </div>
         </div>
         <div class="product-card">
           <img data-img="cheeseburgerSuper" alt="The Cheeseburguer Super">
           <div class="product-info">
             <h3 class="product-title">The Cheeseburguer Super</h3>
-            <p class="product-desc">Dois hambúrgueres de 120g, cheddar, alface americana, tomate e maionese especial The Old.</p>
-            <div class="product-price">R$ XX,XX</div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img data-img="cheeseburgerBaconSuper" alt="The Cheeseburguer Bacon Super">
-          <div class="product-info">
-            <h3 class="product-title">The Cheeseburguer Bacon Super</h3>
-            <p class="product-desc">Dois hambúrgueres de 120g, cheddar, alface americana, tomate, bacon triturado e maionese especial The Old.</p>
-            <div class="product-price">R$ XX,XX</div>
-          </div>
-        </div>
-        <div class="product-card">
-          <img data-img="cheeseburgerBacon" alt="The Cheeseburguer Bacon">
-          <div class="product-info">
-            <h3 class="product-title">The Cheeseburguer Bacon</h3>
-            <p class="product-desc">Hambúrguer de 120g, cheddar, alface americana, tomate, bacon triturado e maionese especial The Old.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <p class="product-desc">Dois hambúrgueres de 180g, cheddar, alface americana, tomate e maionese especial The Old.</p>
+            <div class="product-price">R$ 44,99</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Acompanhamentos -->
     <section class="category">
       <h2>Acompanhamentos</h2>
       <div class="product-grid">
+        <div class="product-card">
+          <img data-img="fries150" alt="Batata Frita 150g">
+          <div class="product-info">
+            <h3 class="product-title">Batata Frita 150g</h3>
+            <p class="product-desc">Fritura perfeita, crocante por fora e macia por dentro, 150g.</p>
+            <div class="product-price">R$ 9,99</div>
+          </div>
+        </div>
         <div class="product-card">
           <img data-img="fries" alt="Batata Frita">
           <div class="product-info">
             <h3 class="product-title">Batata Frita</h3>
             <p class="product-desc">Fritura perfeita, crocante por fora e macia por dentro, 300g.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <div class="product-price">R$ 15,99</div>
           </div>
         </div>
         <div class="product-card">
@@ -155,41 +155,45 @@
           <div class="product-info">
             <h3 class="product-title">Batata The Old</h3>
             <p class="product-desc">Batata frita coberta com creme de cheddar e bacon crocante triturado, 300g.</p>
-            <div class="product-price">R$ XX,XX</div>
+            <div class="product-price">R$ 24,99</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Molhos -->
     <section class="category">
       <h2>Molhos</h2>
       <div class="product-grid">
-        <div class="product-card">  
-          <img data-img="sauceMayo" alt="The Old Maionese">  
-          <div class="product-info">  
-            <h3 class="product-title">The Old Maionese</h3>  
-            <p class="product-desc">Maionese artesanal.</p>  
-            <div class="product-price">R$ XX,XX</div>  
+        <div class="product-card">
+          <img data-img="sauceMayo" alt="The Old Maionese">
+          <div class="product-info">
+            <h3 class="product-title">The Old Maionese</h3>
+            <p class="product-desc">Maionese artesanal, 30g.</p>
+            <div class="product-price">R$ 3,00</div>
           </div>
         </div>
-        <div class="product-card">  
-          <img data-img="sauceOld" alt="Molho The Old">  
-          <div class="product-info">  
-            <h3 class="product-title">Molho The Old</h3>  
-            <p class="product-desc">Nosso molho secreto e irresistível.</p>  
-            <div class="product-price">R$ XX,XX</div>  
+        <div class="product-card">
+          <img data-img="sauceOld" alt="Molho The Old">
+          <div class="product-info">
+            <h3 class="product-title">Molho The Old</h3>
+            <p class="product-desc">Nosso molho secreto e irresistível, 30g.</p>
+            <div class="product-price">R$ 3,00</div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Sobremesas -->
     <section class="category">
       <h2>Sobremesas</h2>
       <div class="product-grid">
-        <div class="product-card">  
-          <img data-img="churros" alt="Mini Churros">  
-          <div class="product-info">  
-            <h3 class="product-title">Mini Churros</h3>  
-            <p class="product-desc">10 mini churros crocantes por fora, macios por dentro e recheados com doce de leite cremoso. Finalizados com açúcar e canela.</p>  
-            <div class="product-price">R$ XX,XX</div>  
+        <div class="product-card">
+          <img data-img="churros" alt="Mini Churros">
+          <div class="product-info">
+            <h3 class="product-title">Mini Churros</h3>
+            <p class="product-desc">10 mini churros crocantes por fora, macios por dentro e recheados com doce de leite cremoso. Finalizados com açúcar e canela.</p>
+            <div class="product-price">R$ 15,99</div>
           </div>
         </div>
       </div>
